@@ -1,0 +1,6 @@
+version: "Apple Swift version 4.0 (swiftlang-900.0.65 clang-900.0.37)"
+options: "e1b5161a8d8e2738a052e19f8b492e16"
+build_time: [1511423179, 85087000]
+inputs:
+  "/Users/yuannnn/Documents/hardwareTest/hardwareTest/ViewController.swift": [1502808830, 0]
+  "/Users/yuannnn/Documents/hardwareTest/hardwareTest/AppDelegate.swift": [1502788370, 0]

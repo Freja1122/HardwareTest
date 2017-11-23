@@ -14,6 +14,7 @@
 		95C26A6C1F42F29200FEA4F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95C26A6A1F42F29200FEA4F3 /* LaunchScreen.storyboard */; };
 		95C26A771F42F29200FEA4F3 /* hardwareTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C26A761F42F29200FEA4F3 /* hardwareTestTests.swift */; };
 		95C26A821F42F29200FEA4F3 /* hardwareTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C26A811F42F29200FEA4F3 /* hardwareTestUITests.swift */; };
+		95C26A961F42F31700FEA4F3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95C26A951F42F31700FEA4F3 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,8 @@
 		95C26A7D1F42F29200FEA4F3 /* hardwareTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = hardwareTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		95C26A811F42F29200FEA4F3 /* hardwareTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hardwareTestUITests.swift; sourceTree = "<group>"; };
 		95C26A831F42F29200FEA4F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95C26A8F1F42F2E700FEA4F3 /* hardwareTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = hardwareTest.entitlements; sourceTree = "<group>"; };
+		95C26A951F42F31700FEA4F3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95C26A961F42F31700FEA4F3 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +85,7 @@
 				95C26A751F42F29200FEA4F3 /* hardwareTestTests */,
 				95C26A801F42F29200FEA4F3 /* hardwareTestUITests */,
 				95C26A5F1F42F29200FEA4F3 /* Products */,
+				95C26A901F42F2F500FEA4F3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,6 +102,7 @@
 		95C26A601F42F29200FEA4F3 /* hardwareTest */ = {
 			isa = PBXGroup;
 			children = (
+				95C26A8F1F42F2E700FEA4F3 /* hardwareTest.entitlements */,
 				95C26A611F42F29200FEA4F3 /* AppDelegate.swift */,
 				95C26A631F42F29200FEA4F3 /* ViewController.swift */,
 				95C26A651F42F29200FEA4F3 /* Main.storyboard */,
@@ -123,6 +129,14 @@
 				95C26A831F42F29200FEA4F3 /* Info.plist */,
 			);
 			path = hardwareTestUITests;
+			sourceTree = "<group>";
+		};
+		95C26A901F42F2F500FEA4F3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				95C26A951F42F31700FEA4F3 /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,7 +207,22 @@
 				TargetAttributes = {
 					95C26A5D1F42F29200FEA4F3 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 2XYAGB2947;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 0;
+							};
+							com.apple.HomeKit = {
+								enabled = 0;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+							com.apple.Siri = {
+								enabled = 1;
+							};
+						};
 					};
 					95C26A711F42F29200FEA4F3 = {
 						CreatedOnToolsVersion = 8.3.3;
@@ -414,9 +443,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = hardwareTest/hardwareTest.entitlements;
+				DEVELOPMENT_TEAM = 2XYAGB2947;
 				INFOPLIST_FILE = hardwareTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = qwe.hardwareTest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tac.songshi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -426,9 +457,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = hardwareTest/hardwareTest.entitlements;
+				DEVELOPMENT_TEAM = 2XYAGB2947;
 				INFOPLIST_FILE = hardwareTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = qwe.hardwareTest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tac.songshi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -507,6 +540,7 @@
 				95C26A881F42F29200FEA4F3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		95C26A891F42F29200FEA4F3 /* Build configuration list for PBXNativeTarget "hardwareTestTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +549,7 @@
 				95C26A8B1F42F29200FEA4F3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		95C26A8C1F42F29200FEA4F3 /* Build configuration list for PBXNativeTarget "hardwareTestUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +558,7 @@
 				95C26A8E1F42F29200FEA4F3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
